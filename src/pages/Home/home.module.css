@@ -1,0 +1,895 @@
+@import url("../../variables.css");
+
+@media (max-width: 768px){
+    :root{
+        font-size: 1vw;
+    }
+}
+        
+    .App{
+        width: var(--Width-Relative-Max);
+        min-height: var(--Height-Absolute-Max);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    
+        background-color: var(--Light-Gray);
+
+        background-color: #eee;
+
+        position: relative;
+    }
+
+    .App *{
+        font-size: var(--Font-Size-Normal);
+        letter-spacing: var(--Letter-Spacing-Normal);
+        line-height: var(--Line-Height-Normal);
+    }
+
+        .Links{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+            .Link{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+        #Navegation{
+            top: 0;
+            background: white;
+            width: 100%;
+            min-width: 320px;
+            max-width: 1920px;
+            height: 5rem;
+            min-height: 50px;
+            justify-content: flex-end;
+
+            padding: 0 50px;
+        }
+
+        @media (max-width: 768px){
+            #Navegation{
+                padding: 0 20px;
+            }
+        }
+
+            #LinkHome, #LinkProject, #LinkContact {
+                width: 5rem;
+                min-width: 50px;
+                height: 100%;
+                min-height: 50px;
+                background-color: white;
+            }
+
+            #LinkHome:hover, #LinkProject:hover, #LinkContact:hover {
+                background-color: black;
+            }
+
+            #LinkHome:active, #LinkProject:active, #LinkContact:active {
+                background-color: white;
+            }
+
+            @media (max-width: 768px){
+                #LinkHome:hover, #LinkProject:hover, #LinkContact:hover {
+                    background-color: white;
+                }
+
+                #LinkHome:active, #LinkProject:active, #LinkContact:active {
+                    background-color: black;
+                }
+            }
+
+            #LinkHome > i, #LinkProject > i, #LinkContact > i {
+                font-size: 16px !important;
+            }
+
+            #LinkHome:hover > i, #LinkProject:hover > i, #LinkContact:hover > i {
+                color: white;
+            }
+
+            #LinkHome:active > i, #LinkProject:active > i, #LinkContact:active > i {
+                color: black;
+            }
+
+            @media (max-width: 768px){
+                #LinkHome:hover > i, #LinkProject:hover > i, #LinkContact:hover > i {
+                    color: black;
+                }
+
+                #LinkHome:active > i, #LinkProject:active > i, #LinkContact:active > i {
+                    color: white;
+                }
+            }
+
+        .View{
+            width: calc(100%);
+            min-width: 320px;
+            max-width: 1920px;
+            height: 100%;
+            min-height: var(--Height-Absolute-Max);
+        } 
+
+        #Home{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+        }
+
+        #Home::before{
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-image: url("./assets/images/background/03.jpg");
+            background-size: cover;
+            background-position: top left;
+            background-repeat: no-repeat;
+            z-index: 10;
+
+            filter: brightness(30%);
+        }
+
+        @media (max-width: 768px){
+            #Home::before{
+                background-position: top right -200px;
+            }
+        }
+
+            .Placard{
+                min-width: 280px;
+                display: inline-block;
+                text-align: center;
+                z-index: 20;
+            }
+
+            @media (max-width: 1024px){
+                .Placard{
+                    margin: 0 20px;
+                }
+            }
+
+                .Placard > h1{
+                    font-family: var(--Font-Family-Normal);
+                    text-align: start;
+                    font-family: var(--Font-Family-Display);
+                    font-size: var(--Font-Size-Display);
+                    letter-spacing: var(--Letter-Spacing-Display);
+                    line-height: var(--Line-Height-Display);
+                    font-weight: 900;
+                    color: #fff;
+                }
+
+                @media (max-width: 1024px){
+                    .Placard > h1{
+                        font-size: 9rem;
+                        letter-spacing: calc(9rem / 10);
+                        line-height: calc(9rem / 100 * 120);
+                    }
+                }
+
+                @media (max-width: 768px){
+                    .Placard > h1{
+                        font-size: 11.5rem;
+                        letter-spacing: calc(11.5rem / 10);
+                        line-height: calc(11.5rem / 100 * 120);
+                    }
+                }
+
+                @media (max-width: 320px){
+                    .Placard > h1{
+                        font-size: 36px;
+                        letter-spacing: calc(36px / 10);
+                        line-height: calc(36px / 100 * 120);
+                    }
+                }
+
+                .Placard > h3{
+                    font-family: var(--Font-Family-Normal);
+                    display: inline-block;
+                    font-family: var(--Font-Family-Title);
+                    font-size: calc(var(--Font-Size-Title) * 1);
+                    letter-spacing: var(--Letter-Spacing-Title);
+                    line-height: var(--Line-Height-Title);
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-align: center;
+                    margin: 2rem 0 3rem 0;
+                    color: #fff;
+                }
+
+                @media (max-width: 1024px){
+                    .Placard > h3{
+                        font-size: 2.66rem;
+                        letter-spacing: calc(2.66rem / 10);
+                        line-height: calc(2.66rem / 100 * 120);
+                    }
+                }
+
+                @media (max-width: 768px){
+                    .Placard > h3{
+                        margin: 20px 0 30px 0;
+
+                        font-size: clamp(18px, 3.41rem, 28px);
+                        letter-spacing: clamp(calc(18px / 10), calc(3.41rem / 10), calc(28px / 10));
+                        line-height: clamp(calc(18px / 100 * 120), calc(3.41rem / 100 * 120), calc(28px / 100 * 120));
+                    }
+                }
+
+                @media (max-width: 480px){
+                    .Placard > h3{
+                        margin: 20px 0 25px 0;
+                    }
+                }
+        
+                .buttons{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+            
+                    .buttons > button{
+                        font-family: var(--Font-Family-Normal);
+                        font-weight: bold;
+                        width: calc(50% - 2rem);
+                        padding: 1.5rem;
+                        text-transform: uppercase;
+                        border: 1px solid white;
+                        background-color: white;
+                        color: black;
+                        text-align: center;
+                    }
+
+                    .buttons > button:hover{
+                        background-color: black;
+                        color: white;
+                    }
+
+                    .buttons > button:active{
+                        background-color: white;
+                        color: black;
+                    }
+
+                    .buttons > button:first-of-type{
+                        margin-right: 4rem;
+                    }
+            
+                    @media (max-width: 768px){
+                        .buttons > button{
+                            width: calc(50% - 20px);
+                            padding: 20px;
+                            font-size: 12px;
+                            letter-spacing: calc(12px / 10);
+                            line-height: calc(12px / 100 * 120);
+                        }
+
+                        .buttons > button:hover{
+                            background-color: white;
+                            color: black;
+                        }
+
+                        .buttons > button:active{
+                            background-color: black;
+                            color: white;
+                        }
+
+                        .buttons > button:first-of-type{
+                            margin-right: 40px;
+                        }
+                    }
+                
+                    @media (max-width: 480px){
+                        .buttons > button{
+                            width: calc(50% - 10px);
+                            padding: 15px;
+                            font-size: 12px;
+                            letter-spacing: calc(12px / 10);
+                            line-height: calc(12px / 100 * 120);
+                        }
+
+                        .buttons > button:first-of-type{
+                            margin-right: 20px;
+                        }
+                    }
+
+        #Project{
+            min-width: 320px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+            position: relative;
+        }
+            
+        @media (max-width: 768px){
+            #Project{
+                padding: 50px 0;
+            }
+        }
+
+            .Painel{
+                margin: 20px;
+                width: calc(100vw - 40px);
+                max-width: 360px;
+                min-width: 280px;
+                height: calc(100vw * 3 / 2 - 40px);
+                max-height: 540px;
+                min-height: 420px;
+                background-color: #fff;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 20;
+                position: relative;
+            }
+
+            .PainelDisabled{
+                cursor: auto;
+                user-select: none;
+            }
+
+            .PainelDisabled::before{
+                content: "em desenvolvimento";
+                font-size: 18px;
+                line-height: (18px / 100 * 120);
+                font-weight: bold;
+                text-align: center;
+                text-transform: uppercase;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.50);
+                cursor: auto;
+                user-select: none;
+                z-index: 20;
+            }
+
+                .Thumbnail, .Description{
+                    display: flex;
+                    width: 100%;
+                    height: 50%;
+                    position: relative;
+                }
+
+                .Thumbnail::before{
+                    content: "";
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    z-index: 10;
+                }
+
+                #ThumbnailToDo::before{
+                    background-image: url("./assets/images/card/todolist.jpg");
+                    background-position: top center;
+                }
+
+                #ThumbnailPomodoro::before{
+                    background-image: url("./assets/images/card/pomodoro.jpg");
+                    background-position: center center;
+                }
+
+                #ThumbnailPokedex::before{
+                    background-image: url("./assets/images/card/pokedex.jpg");
+                    background-position: center center;
+                }
+
+                .Description{
+                    flex-direction: column;
+                    padding: 25px;
+                }
+
+                    .Description > h4{
+                        font-family: var(--Font-Family-Title);
+                        
+                        font-size: var(--Font-Size-SubTitle);
+                        line-height: var(--Line-Height-SubTitle);
+
+                        font-weight: var(--Font-Weight-Bold);
+
+                        /* text-transform: uppercase; */
+
+                        margin-bottom: 15px;
+                    }
+            
+                    @media (max-width: 768px){
+                        .Description > h4{
+                            font-size: 25px;
+                            line-height: calc(25px / 100 * 120);
+                        }
+                    }
+
+                    .Description > p{
+                        font-family: var(--Font-Family-Normal);
+                        flex-grow: 1;
+                        overflow: auto;
+                        opacity: 85%;
+                        margin-bottom: 15px;
+                    }
+            
+                    @media (max-width: 768px){
+                        .Description > p{
+                            font-size: 16px;
+                            line-height: calc(16px / 100 * 120);
+                        }
+                    }
+
+                    .Actions{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        align-items: center;
+                    }
+
+                        .Action{
+                            font-family: var(--Font-Family-Normal);
+                            opacity: 85%;
+                            font-weight: bold;
+                            text-decoration: none;
+                        }
+                        
+                        .Action:hover{
+                            opacity: 100%;
+                            text-decoration: underline;
+                        }
+                        
+                        .Action:active{
+                            opacity: 85%;
+                            text-decoration: none;
+                        }
+            
+                        @media (max-width: 768px){
+                            .Action{
+                                font-size: 16px;
+                                line-height: calc(16px / 100 * 120);
+                            }
+                        
+                            .Action:hover{
+                                opacity: 85%;
+                                text-decoration: none;
+                            }
+                        
+                            .Action:active{
+                                opacity: 100%;
+                                text-decoration: underline;
+                            }
+                        } 
+
+        #Contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #111;
+        }
+
+            .AutoFill{
+                width: 100%;
+                max-width: 480px;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .Information{
+                    margin: var(--Margin-Default);
+                    margin: 70px 20px;
+                    width: calc(100% - 40px);
+                }
+
+                    .Form{
+                        width: var(--Width-Relative-Max);
+        
+                        padding: var(--Padding-Medium);
+                        margin-bottom: var(--Margin-Medium);
+        
+                        background-color: var(--White);
+                    }
+            
+                    @media (max-width: 768px){
+                        .Form{
+                            padding: 20px;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                        #Status{
+                            display: none;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-size: 16px;
+                            line-height: calc(16px / 100 * 120);
+                            width: 100%;
+                            padding: 10px;
+                            margin-bottom: 10px;
+                        }
+
+                        .Groups{
+                            width: var(--Width-Relative-Max);
+        
+                            margin-bottom: var(--Margin-Regular);
+        
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+            
+                        @media (max-width: 768px){
+                            .Groups{
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                            .LabelInputText{
+                                font-family: var(--Font-Family-Normal);
+                                padding-left: 0;
+                                padding-bottom: var(--Padding-Small);
+        
+                                width: var(--Width-Relative-Max);
+        
+                                display: flex;
+                            }
+            
+                            @media (max-width: 768px){
+                                .LabelInputText{
+                                    font-size: 16px;
+                                    letter-spacing: calc(16px / 10);
+                                    line-height: calc(16px / 100 * 120);
+
+                                    padding: 10px 0;
+                                }
+                            }
+
+                            .InputText{
+                                font-family: var(--Font-Family-Normal);
+                                padding: var(--Padding-Regular);
+        
+                                width: var(--Width-Relative-Max);
+        
+                                display: flex;
+        
+                                background-color: var(--Light-Gray);
+                            }
+            
+                            @media (max-width: 768px){
+                                .InputText{
+                                    font-size: 16px;
+                                    letter-spacing: calc(16px / 10);
+                                    line-height: calc(16px / 100 * 120);
+
+                                    padding: 10px;
+                                }
+                            }
+
+                            .TextArea{
+                                font-family: var(--Font-Family-Normal);
+                                padding: var(--Padding-Regular);
+        
+                                width: var(--Width-Relative-Max);
+                                height: var(--Height-Relative-Max);
+                                min-height: calc(var(--Height-Lateral) * 3); 
+        
+                                display: flex;
+                                
+                                background-color: var(--Light-Gray);
+                                
+                                resize: none;
+                            }
+            
+                            @media (max-width: 768px){
+                                .TextArea{
+                                    min-height: 150px; 
+                                    font-size: 16px;
+                                    letter-spacing: calc(16px / 10);
+                                    line-height: calc(16px / 100 * 120);
+                                    padding: 10px;
+                                }
+                            }
+                            
+                            .InputButton{
+                                font-family: var(--Font-Family-Normal);
+                                background-color: #000;
+                                border: 1px solid black;
+                                color: #fff;
+                                padding: 1rem;
+                                width: var(--Width-Relative-Max);
+        
+                                margin-top: var(--Margin-Regular);
+
+                                font-weight: bold;
+                            }
+
+                            .InputButton:hover{
+                                background-color: #fff;
+                                color: #000;
+                            }
+                            
+                            .InputButton:active{
+                                background-color: #000;
+                                color: #fff;
+                            }
+            
+                            @media (max-width: 768px){
+                                .InputButton{
+                                    margin-top: 10px;
+
+                                    font-size: 16px;
+                                    letter-spacing: calc(16px / 10);
+                                    line-height: calc(16px / 100 * 120);
+
+                                    padding: 10px;
+                                }
+
+                                .InputButton:hover{
+                                    background-color: #000;
+                                    color: #fff;
+                                }
+                                
+                                .InputButton:active{
+                                    background-color: #fff;
+                                    color: #000;
+                                }
+                            }
+
+                        .Groups:last-child{
+                            margin-bottom: 0;
+                        }
+
+                    .Contact{
+                        width: var(--Width-Relative-Max);
+        
+                        padding: var(--Padding-Medium);
+                        margin-bottom: var(--Margin-Medium);
+        
+                        background-color: var(--White);
+                    }
+            
+                    @media (max-width: 768px){
+                        .Contact{
+                            padding: 20px;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                        .Email{
+                            width: var(--Width-Relative-Max);
+                            height: var(--Height-Relative-Max);
+        
+                            text-align: center;
+        
+                            border: 1px solid var(--Black);
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                            .EmailText{
+                                font-family: var(--Font-Family-Normal);
+                                width: var(--Width-Relative-Max);
+                                height: var(--Height-Relative-Max);
+        
+                                padding: var(--Padding-Regular);
+                                
+                                text-align: center;
+                            }
+
+                            .EmailText:focus{
+                                box-shadow: none;
+                            }
+            
+                            @media (max-width: 768px){
+                                .EmailText{
+                                    font-size: 16px;
+                                    letter-spacing: calc(16px / 10);
+                                    line-height: calc(16px / 100 * 120);
+
+                                    padding: 10px;
+                                }
+                            }
+                            
+                            .Email>i{
+                                font-size: 2rem;
+
+                                padding: var(--Padding-Regular);
+
+                                height: var(--Height-Relative-Max);
+                                
+                                background-color: var(--White);
+        
+                                text-align: center;
+        
+                                color: var(--Black);
+        
+                                cursor: pointer;
+                            }
+                            
+                            .Email > i:hover{
+                                background-color: var(--Black);
+                                color: var(--White);
+                            }
+                            
+                            .Email > i:active{
+                                background-color: var(--White);
+                                color: var(--Black);
+                            }
+            
+                            @media (max-width: 768px){
+                                .Email>i{
+                                    font-size: 16px;
+                                    letter-spacing: calc(16px / 10);
+                                    line-height: calc(16px / 100 * 120);
+
+                                    padding: 10px;
+                                }
+                            
+                                .Email > i:hover{
+                                    background-color: var(--White);
+                                    color: var(--Black);
+                                }
+                                
+                                .Email > i:active{
+                                    background-color: var(--Black);
+                                    color: var(--White);
+                                }
+                            }
+
+                    .SocialMidias{
+                        width: var(--Width-Relative-Max);
+
+                        background-color: var(--White);
+                        color: var(--Black);
+                    }
+                    
+                        .Icons{
+                            width: var(--Width-Relative-Max);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: var(--White);
+                            color: var(--Black);
+                        }
+
+                            .Icons > a{
+                                width: 50px;
+                                height: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: var(--White);
+                                color: var(--Black);
+                            }
+
+                            .Icons > a:link{
+                                background-color: var(--White);
+                            }
+
+                            .Icons > a:visited{
+                                background-color: var(--White);
+                            }
+
+                            .Icons > a:hover{
+                                background-color: var(--Black);
+                            }
+
+                            .Icons > a:active{
+                                background-color: var(--White);
+                            }
+            
+                            @media (max-width: 768px){
+
+                                .Icons > a:hover{
+                                    background-color: var(--White);
+                                }
+
+                                .Icons > a:active{
+                                    background-color: var(--Black);
+                                }
+                            }
+
+                                .Icons > a > i{
+                                    font-size: 24px;
+                                }
+
+                                .Icons > a:link > i{
+                                    color: #000;
+                                }
+
+                                .Icons > a:visited > i{
+                                    color: #000;
+                                }
+
+                                .Icons > a:hover > i{
+                                    color: #fff;
+                                }
+
+                                .Icons > a:active > i{
+                                    color: #000;
+                                }
+            
+                                @media (max-width: 768px){
+                                    .Icons > a:hover > i{
+                                        color: #000;
+                                    }
+
+                                    .Icons > a:active > i{
+                                        color: #fff;
+                                    }
+                                }
+
+                .Footer{
+                    width: var(--Width-Relative-Max);
+        
+                    padding: var(--Padding-Regular);
+        
+                    background-color: var(--White);
+                }
+            
+                @media (max-width: 768px){
+                    .Footer{
+                        padding: 10px;
+                    }
+                }
+
+                    .Copyright{
+                        font-family: var(--Font-Family-Normal);
+                        color: var(--Black);
+            
+                        text-align: center;
+
+                        font-size: var(--Font-Size-Small);
+                    }
+            
+                    @media (max-width: 768px){
+                        .Copyright{
+                            font-size: 12px;
+                            line-height: calc(12px / 100 * 120);
+                        }
+                    }
+
+/* .cube{
+    display: inline-block;
+    min-width: 300px;
+    min-height: 300px;
+    margin: 5rem;
+    background-color: red;
+} */

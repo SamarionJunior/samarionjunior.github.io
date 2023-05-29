@@ -1,0 +1,96 @@
+:root{
+
+    /* Colors */
+
+    --Black: #000;
+    --White: #fff;
+    --Light-Gray: #eee;
+    --Dark-Gray: #111;
+    --Medium-Gray: #999999;
+    --High-Opacity-Black: rgba(0,0,0,0.85);
+    --Low-Opacity-Balck: rgba(0, 0, 0, 0.15);
+
+    --Linear-Gradiente: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.7), rgba(255,255,255,0.0));
+
+    --Text-Shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --Transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    --Shadow-Test: 1px solid black;
+
+    /* Fonts */
+
+    --Font-Family-Display: 'Rubik Mono One', sans-serif;
+    --Font-Family-Title: 'Lora', serif;
+    --Font-Family-Normal: 'Montserrat', sans-serif;
+
+    --Font-Size-Root: 62.5%;
+
+    --Font-Size-Root-Tablet: 50%;
+
+    --Font-Size-Root-Mobile: 47.5%;
+
+    --Letter-Spacing-Normal: normal;
+
+    --Font-Size-Small: 1.2rem;
+    --Line-Height-Small: calc(1.2rem / 100 * 120);
+
+    --Font-Size-Normal: 1.6rem;
+    --Line-Height-Normal: calc(1.6rem / 100 * 120);
+
+    --Font-Size-SubTitle: 2.8rem;
+    --Line-Height-SubTitle: calc(2.8rem / 100 * 120);
+
+    --Font-Size-Title: 3.2rem;
+    --Letter-Spacing-Title: 0.32rem;
+    --Line-Height-Title: calc(3.2rem / 100 * 120);
+
+    --Font-Size-Display: 10.8rem;
+    --Letter-Spacing-Display: 1.08rem;
+    --Line-Height-Display: calc(10.8rem / 100 * 120);
+
+    --Font-Weight-Regular: 400;
+    --Font-Weight-Bold: 700;
+    --Font-Weight-Black: 900;
+
+    /* Espaçamento */
+
+    --Width-Lateral: 5rem;
+    --Height-Lateral: 5rem;
+
+    --Width-Relative-Max: 100%;
+    --Height-Relative-Max: 100%;
+
+    --Width-Relative-Medium: 50%;
+    --Height-Relative-Medium: 50%;
+
+    --Width-Absolute-Max: 100vw;
+    --Height-Absolute-Max: 100vh;
+    
+    --Margin-Micro: 0.25rem;
+    --Padding-Micro: 0.25rem;
+    
+    --Margin-Small: 0.5rem;
+    --Padding-Small: 0.5rem;
+    
+    --Margin-Regular: 1.0rem;
+    --Padding-Regular: 1.0rem;
+    
+    --Margin-Default: 1.5rem;
+    --Padding-Default: 1.5rem;
+    
+    --Margin-Medium: 2.0rem;
+    --Padding-Medium: 2.0rem;
+    
+    --Margin-Big: 2.5rem;
+    --Padding-Big: 2.5rem;
+    
+    --Margin-Large: 5.0rem;
+    --Padding-Large: 5.0rem;
+
+    /* Opacities */
+
+    --Opacity-High: 85%;
+    --Opacity-Medium: 60%;
+    --Opacity-Low: 50%;
+
+}
