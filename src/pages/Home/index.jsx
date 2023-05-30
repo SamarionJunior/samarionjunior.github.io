@@ -111,7 +111,7 @@ const Home = _ => {
                         <div className={Style.Actions}>
                             <Link to="https://samarionjunior.github.io/ToDo/" className={Style.Action} target="_blank" rel="noopener noreferrer">Web</Link>
                             <Link to="https://github.com/SamarionJunior/ToDo" className={Style.Action} target="_blank" rel="noopener noreferrer">Git</Link>
-                            <Link to="https://samarionjunior.github.io/ToDo/" className={Style.Action} target="_blank" rel="noopener noreferrer">Apk</Link>
+                            <Link to="https://samarionjunior.github.io/ToDo/" className={`${Style.Action} ${Style.ActionDisable}`} target="_blank" rel="noopener noreferrer">Apk</Link>
                         </div>
                     </div>
                 </div>

@@ -124,6 +124,7 @@
             align-items: center;
 
             position: relative;
+            overflow: hidden;
         }
 
         #Home::before{
@@ -143,6 +144,7 @@
             z-index: 10;
 
             filter: brightness(30%);
+            overflow: hidden;
         }
 
         @media (max-width: 768px){
@@ -185,7 +187,7 @@
 
                 @media (max-width: 768px){
                     .Placard > h1{
-                        font-size: 11.5rem;
+                        font-size: 11.5rem; /* ERRO */
                         letter-spacing: calc(11.5rem / 10);
                         line-height: calc(11.5rem / 100 * 120);
                     }
@@ -490,6 +492,23 @@
                                 opacity: 100%;
                                 text-decoration: underline;
                             }
+                        }
+
+                        .ActionDisable{
+                            color: var(--Medium-Gray) !important;
+                            opacity: 100% !important;
+                            text-decoration: none !important;
+                            cursor: default !important;
+                        }
+                        
+                        .ActionDisable:hover{
+                            opacity: 100% !important;
+                            text-decoration: none !important;
+                        }
+                        
+                        .ActionDisable:active{
+                            opacity: 100% !important;
+                            text-decoration: none !important;
                         } 
 
         #Contact{
