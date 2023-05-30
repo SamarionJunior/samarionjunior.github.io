@@ -499,6 +499,11 @@
                             opacity: 100% !important;
                             text-decoration: none !important;
                             cursor: default !important;
+                            pointer-events: none !important;
+                        }
+
+                        .ActionDisable[disabled]{
+                            pointer-events: none !important;
                         }
                         
                         .ActionDisable:hover{
