@@ -1,7 +1,7 @@
 {
   "name": "mywebsite",
   "version": "1.0.0",
-  "homepage": "https://samarionjunior.github.io/MyWebSite",
+  "homepage": "https://samarionjunior.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",

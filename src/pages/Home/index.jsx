@@ -126,9 +126,9 @@ const Home = _ => {
                             é uma enciclopédia virtual que detém todas as espécies de pokémon.
                         </p>
                         <div className={Style.Actions}>
-                            <Link to="https://samarionjunior.github.io/MyWebSite/" className={Style.Action} target="_blank" rel="noopener noreferrer">Web</Link>
-                            <Link to="https://samarionjunior.github.io/MyWebSite/" className={Style.Action} target="_blank" rel="noopener noreferrer">Git</Link>
-                            <Link to="https://samarionjunior.github.io/MyWebSite/" className={Style.Action} target="_blank" rel="noopener noreferrer">Apk</Link>
+                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Web</Link>
+                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Git</Link>
+                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Apk</Link>
                         </div>
                     </div>
                 </div>
@@ -145,9 +145,9 @@ const Home = _ => {
                             o trabalho em períodos de 25 minutos, separados por breves intervalos. 
                         </p>
                         <div className={Style.Actions}>
-                            <Link to="https://samarionjunior.github.io/MyWebSite/" className={Style.Action} target="_blank" rel="noopener noreferrer">Web</Link>
-                            <Link to="https://samarionjunior.github.io/MyWebSite/" className={Style.Action} target="_blank" rel="noopener noreferrer">Git</Link>
-                            <Link to="https://samarionjunior.github.io/MyWebSite/" className={Style.Action} target="_blank" rel="noopener noreferrer">Apk</Link>
+                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Web</Link>
+                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Git</Link>
+                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Apk</Link>
                         </div>
                     </div>
                 </div>
