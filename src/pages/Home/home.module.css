@@ -909,11 +909,3 @@
                             line-height: calc(12px / 100 * 120);
                         }
                     }
-
-/* .cube{
-    display: inline-block;
-    min-width: 300px;
-    min-height: 300px;
-    margin: 5rem;
-    background-color: red;
-} */

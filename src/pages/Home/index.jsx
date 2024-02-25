@@ -3,8 +3,6 @@ import Style from './home.module.css';
 
 import axios from "axios";
 
-// import {createBrowserHistory} from "history";
-
 const Home = _ => {
 
     const onSubmit = e => {
@@ -41,17 +39,15 @@ const Home = _ => {
             }
         })
         .catch(error => {
-        console.log(error)
-        document.getElementById(`${Style.Status}`).style.backgroundColor = "#ff0f0f";
-        document.getElementById(`${Style.Status}`).innerText = "Houve um erro no envio do seu E-mail!!!"
+            console.log(error)
+            document.getElementById(`${Style.Status}`).style.backgroundColor = "#ff0f0f";
+            document.getElementById(`${Style.Status}`).innerText = "Houve um erro no envio do seu E-mail!!!"
         });
 
     }
     
     function toLink(e, id) {
         e.preventDefault();
-        // const target = document.querySelector(id);
-        // window.smoothScroll.animateScroll( target );
         const offsetTop = document.getElementById(id).offsetTop;
         window.scrollTo({
             top: offsetTop,
@@ -59,9 +55,7 @@ const Home = _ => {
         });
     }
     function copyText() {
-        // console.log(`#${Style.TextCopyEmail}`)
         let textoCopiado = document.getElementById("TextCopyEmail");
-        // console.log(textoCopiado)
         textoCopiado.select();
         textoCopiado.setSelectionRange(0, 99999)
         document.execCommand("copy");
@@ -206,5 +200,3 @@ const Home = _ => {
 }
 
 export default Home;
-
-        
