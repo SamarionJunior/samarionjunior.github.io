@@ -383,35 +383,38 @@
                     position: relative;
                 }
 
-                .Thumbnail::before{
-                    content: "";
+                    #ThumbnailToDo{
+                        content: "";
 
-                    position: absolute;
-                    top: 0;
-                    left: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
 
-                    width: 100%;
-                    height: 100%;
+                        width: 100%;
+                        height: 100%;
 
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    z-index: 10;
-                }
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        z-index: 10;
 
-                #ThumbnailToDo::before{
-                    background-image: url("./assets/images/card/todolist.jpg");
-                    background-position: top center;
-                }
+                        /* background-image: url("./assets/images/card/todolist.jpg"); */
+                        /* background-position: top center; */
+                    }
 
-                #ThumbnailPomodoro::before{
-                    background-image: url("./assets/images/card/pomodoro.jpg");
-                    background-position: center center;
-                }
+                    /* #ThumbnailToDo{
+                        background-image: url("./assets/images/card/todolist.jpg");
+                        background-position: top center;
+                    }
 
-                #ThumbnailPokedex::before{
-                    background-image: url("./assets/images/card/pokedex.jpg");
-                    background-position: center center;
-                }
+                    #ThumbnailPomodoro::before{
+                        background-image: url("./assets/images/card/pomodoro.jpg");
+                        background-position: center center;
+                    }
+
+                    #ThumbnailPokedex::before{
+                        background-image: url("./assets/images/card/pokedex.jpg");
+                        background-position: center center;
+                    } */
 
                 .Description{
                     flex-direction: column;

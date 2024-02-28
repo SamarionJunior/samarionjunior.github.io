@@ -1,66 +1,12 @@
 import { Link } from "react-router-dom";
 import Style from './home.module.css';
 
-import axios from "axios";
+import {onSubmit, toLink, copyText} from "./main"
+
+import {projects} from "../../contents/projects"
 
 const Home = _ => {
 
-    const onSubmit = e => {
-
-        e.preventDefault()
-
-        const SubmitAssunto = String(document.getElementById("_subject").value)
-        const SubmitNome = String(document.getElementById("name").value)
-        const SubmitEmail = String(document.getElementById("email").value)
-        const SubmitMessagem = String(document.getElementById("message").value)
-
-        console.log(SubmitAssunto)
-        console.log(SubmitNome)
-        console.log(SubmitEmail)
-        console.log(SubmitMessagem)
-
-        document.getElementById(`${Style.Status}`).style.display = "block";
-        document.getElementById(`${Style.Status}`).style.backgroundColor = "gray";
-        document.getElementById(`${Style.Status}`).style.color = "white";
-        document.getElementById(`${Style.Status}`).innerText = "Enviando Mensagem...";
-
-        axios.defaults.headers.post['Content-Type'] = 'application/json';
-        axios.post('https://formsubmit.co/ajax/samarionrtwertertwet2@hotmail.com', JSON.stringify({
-            _subject: SubmitAssunto,
-            name: SubmitNome,
-            email: SubmitEmail,
-            message: SubmitMessagem
-        }))
-        .then(response => {
-            console.log(response)
-            if(response.status === 200){
-                document.getElementById(`${Style.Status}`).style.backgroundColor = "#339900";
-                document.getElementById(`${Style.Status}`).innerText = "Seu E-mail Foi Enviado Com Sucesso!!!";
-            }
-        })
-        .catch(error => {
-            console.log(error)
-            document.getElementById(`${Style.Status}`).style.backgroundColor = "#ff0f0f";
-            document.getElementById(`${Style.Status}`).innerText = "Houve um erro no envio do seu E-mail!!!"
-        });
-
-    }
-    
-    function toLink(e, id) {
-        e.preventDefault();
-        const offsetTop = document.getElementById(id).offsetTop;
-        window.scrollTo({
-            top: offsetTop,
-            behavior: "smooth"
-        });
-    }
-    function copyText() {
-        let textoCopiado = document.getElementById("TextCopyEmail");
-        textoCopiado.select();
-        textoCopiado.setSelectionRange(0, 99999)
-        document.execCommand("copy");
-        textoCopiado.setSelectionRange(0, 0)
-    }
     return (
         <div className={Style.App}>
             <div className={Style.Links} id={Style.Navegation}>
@@ -87,64 +33,42 @@ const Home = _ => {
             </div>
 
             <div className={Style.View} id={Style.Project}>
-                <div className={Style.Painel}>
-                    <div className={Style.Thumbnail} id={Style.ThumbnailToDo}>
 
-                    </div>
-                    <div className={Style.Description}>
-                        <h4>ToDo List</h4>
-                        <p>
-                            É uma lista de tarefas,
-                            de coisas que precisam ser feitas.
-                            É uma forma de organizar as atividades que não podem ser esquecidas,
-                            e que não estão inseridas na nossa rotina.
-                            É diferente de uma agenda,
-                            onde as atividades tem dia e hora para acontecer.
-                            Como por exemplo uma lista de compras.
-                        </p>
-                        <div className={Style.Actions}>
-                            <Link to="https://samarionjunior.github.io/ToDo/" className={Style.Action} target="_blank" rel="noopener noreferrer">Web</Link>
-                            <Link to="https://github.com/SamarionJunior/ToDo" className={Style.Action} target="_blank" rel="noopener noreferrer">Git</Link>
-                            <Link to="https://samarionjunior.github.io/ToDo/" className={`${Style.Action} ${Style.ActionDisable}`} target="_blank" rel="noopener noreferrer">Apk</Link>
+                {projects.map((project, index) => (
+
+                    <div className={project.actived ? Style.Painel : `${Style.Painel} ${Style.PainelDisabled}`} key={index}>
+                        <div className={Style.Thumbnail}>
+                            <div
+                                id={Style.ThumbnailToDo}
+                                style={{
+                                    backgroundImage: `url('${project.thumbnail.url}')`,
+                                    backgroundPosition: project.thumbnail.position
+                                }}/>
+                        </div>
+                        <div className={Style.Description}>
+                            <h4>
+                                {project.title}
+                            </h4>
+                            <p>
+                                {project.description}
+                            </p>
+                            <div className={Style.Actions}>
+                                {project.links.map((link, index) => (
+                                    <Link 
+                                        key={index}
+                                        to={link.url + project.param}
+                                        className={link.url === "" ? `${Style.Action} ${Style.ActionDisable}` : Style.Action}
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                            {link.name}
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className={`${Style.Painel} ${Style.PainelDisabled}`}>
-                    <div className={Style.Thumbnail} id={Style.ThumbnailPokedex}>
 
-                    </div>
-                    <div className={Style.Description}>
-                        <h4>Pokedex</h4>
-                        <p>
-                            A Pokédex (palavra comum no vocabulário dos amantes de Pokémon)
-                            é uma enciclopédia virtual que detém todas as espécies de pokémon.
-                        </p>
-                        <div className={Style.Actions}>
-                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Web</Link>
-                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Git</Link>
-                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Apk</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className={`${Style.Painel} ${Style.PainelDisabled}`}>
-                    <div className={Style.Thumbnail} id={Style.ThumbnailPomodoro}>
+                ))}
 
-                    </div>
-                    <div className={Style.Description}>
-                        <h4>Pomodoro</h4>
-                        <p>
-                            A Técnica Pomodoro é um método de gerenciamento de tempo
-                            desenvolvido por Francesco Cirillo no final dos anos 1980.
-                            A técnica consiste na utilização de um cronômetro para dividir
-                            o trabalho em períodos de 25 minutos, separados por breves intervalos. 
-                        </p>
-                        <div className={Style.Actions}>
-                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Web</Link>
-                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Git</Link>
-                            <Link to="https://samarionjunior.github.io" className={Style.Action} target="_blank" rel="noopener noreferrer">Apk</Link>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div className={Style.View} id={Style.Contact}>
@@ -192,7 +116,7 @@ const Home = _ => {
                     </div>
                 </div>
                 <div className={Style.Footer}>
-                    <div className={Style.Copyright}>Copyright (c) 2023 Samarion Junior</div>
+                    <div className={Style.Copyright}>Copyright (c) 2024 Samarion Junior</div>
                 </div>
             </div>
         </div>
